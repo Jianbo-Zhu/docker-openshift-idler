@@ -1,8 +1,10 @@
 #!/bin/sh
 
+# create a .kubeconfig
+oc project openshift
+
 while true; do
   echo "$(date): Starting ausnimbus idler"
-  echo
   oc get ns -o name -l idle=true | cut -c 11- | while read ns;
     do echo "$(date): Idling resources in $ns";
       oc idle -n $ns --all;
