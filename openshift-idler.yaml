@@ -1,0 +1,24 @@
+kind: "DeploymentConfig"
+apiVersion: "v1"
+metadata:
+  name: "openshift-idler"
+spec:
+  template:
+    metadata:
+      labels:
+        name: "openshift-idler"
+    spec:
+      serviceAccountName: openshift-idler
+      containers:
+        - name: "openshift-idler"
+          image: "ausnimbus/openshift-idler:latest"
+    replicas: 1
+    triggers:
+      - type: "ConfigChange"
+    strategy:
+      type: "Rolling"
+    paused: false
+    revisionHistoryLimit: 1
+    minReadySeconds: 0
+    nodeSelector:
+      type: infra
