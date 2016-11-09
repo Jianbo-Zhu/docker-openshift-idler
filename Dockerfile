@@ -2,6 +2,8 @@ FROM openshift/origin
 
 MAINTAINER AusNimbus <support@ausnimbus.com.au>
 
+ENV KUBECONFIG=/tmp/.kubeconfig
+
 LABEL io.k8s.display-name="OpenShift Idler" \
       io.k8s.description="Periodically idles endpoints"
 
