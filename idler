@@ -12,6 +12,5 @@ while true; do
     done
   echo
 
-  # Sleep for 12 hours
-  sleep 43200
+  sleep $DELAY
 done

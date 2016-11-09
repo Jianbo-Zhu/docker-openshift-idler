@@ -16,6 +16,8 @@ cd docker-openshift-idler
 docker build -t openshift-idler:latest .
 ```
 
+The ENV Variable `DELAY` defaults to 8 hours between runs
+
 ## Create Service Account
 
 ```
