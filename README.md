@@ -1,8 +1,8 @@
 # OpenShift Idler
 
-Periodically idles endpoints [AusNimbus](https://www.ausnimbus.com.au/)
+Periodically idles endpoints for [AusNimbus](https://www.ausnimbus.com.au/)
 
-Every 12 hours, namespaces that have label idle=true will automatically scale down.
+Every 8 hours namespaces that have label idle=true will automatically scale down.
 
 ## Installation
 
